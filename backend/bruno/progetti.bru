@@ -1,0 +1,16 @@
+meta {
+  name: progetti
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/progetti?id_medico=1&tipo_chiamata=foo
+  body: none
+  auth: none
+}
+
+params:query {
+  id_medico: 1
+  tipo_chiamata: foo
+}

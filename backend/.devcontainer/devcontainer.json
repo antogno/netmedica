@@ -1,0 +1,29 @@
+{
+  "name": "NetMedica Backend",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "netmedica-api",
+  "workspaceFolder": "/var/www/html",
+  "features": {
+    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "mrmlnc.vscode-apache"
+      ],
+      "settings": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+        "editor.detectIndentation": false,
+        "editor.formatOnSave": true,
+        "editor.insertSpaces": true,
+        "editor.rulers": [80, 120],
+        "editor.stickyScroll.enabled": true,
+        "editor.tabSize": 2,
+        "files.associations": {
+          ".env.example": "properties"
+        }
+      }
+    }
+  }
+}

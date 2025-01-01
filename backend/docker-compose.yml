@@ -1,0 +1,43 @@
+services:
+  netmedica-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: netmedica-api
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - netmedica-db
+    restart: unless-stopped
+    ports:
+      - 8080:80
+    networks:
+      - netmedica-backend
+  netmedica-db:
+    image: mysql:9.1.0
+    container_name: netmedica-db
+    volumes:
+      - netmedica-db:/var/lib/mysql
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: yes
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+    restart: unless-stopped
+    networks:
+      - netmedica-backend
+  netmedica-phpmyadmin:
+    image: phpmyadmin:5.2.1
+    container_name: netmedica-phpmyadmin
+    environment:
+      PMA_USER: ${DB_USER}
+      PMA_PASSWORD: ${DB_PASSWORD}
+    restart: unless-stopped
+    ports:
+      - 8181:80
+    networks:
+      - netmedica-backend
+volumes:
+  netmedica-db:
+networks:
+  netmedica-backend:

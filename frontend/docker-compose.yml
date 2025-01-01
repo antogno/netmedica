@@ -1,0 +1,14 @@
+services:
+  netmedica-client:
+    image: node:23.5.0
+    container_name: netmedica-client
+    volumes:
+      - .:/app
+    environment:
+      NODE_ENV: development
+    command: ["sleep", "infinity"]
+    restart: unless-stopped
+    networks:
+      - netmedica-client
+networks:
+  netmedica-client:
