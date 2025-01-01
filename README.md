@@ -3,7 +3,6 @@
 <p>
 	<a href="https://github.com/antogno/netmedica/blob/master/LICENSE"><img src="https://img.shields.io/github/license/antogno/netmedica" alt="License"></a>
 	<a href="https://github.com/antogno/netmedica/commits"><img src="https://img.shields.io/github/last-commit/antogno/netmedica" alt="Last commit"></a>
-	<a href="https://github.com/antogno/netmedica/releases/latest"><img src="https://img.shields.io/github/v/tag/antogno/netmedica?label=last%20release" alt="Last release"></a>
 </p>
 
 Simple web application made in PHP and React.
