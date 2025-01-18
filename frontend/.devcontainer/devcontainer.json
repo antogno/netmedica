@@ -1,7 +1,7 @@
 {
   "name": "NetMedica Frontend",
   "dockerComposeFile": ["../docker-compose.yml"],
-  "service": "netmedica-client",
+  "service": "netmedica-frontend-app",
   "workspaceFolder": "/app",
   "features": {
     "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {}

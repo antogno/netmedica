@@ -1,7 +1,7 @@
 services:
-  netmedica-client:
+  netmedica-frontend-app:
     image: node:23.5.0
-    container_name: netmedica-client
+    container_name: netmedica-frontend-app
     volumes:
       - .:/app
     environment:
@@ -9,6 +9,6 @@ services:
     command: ["sleep", "infinity"]
     restart: unless-stopped
     networks:
-      - netmedica-client
+      - netmedica-frontend-app
 networks:
-  netmedica-client:
+  netmedica-frontend-app:

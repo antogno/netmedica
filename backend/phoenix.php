@@ -10,7 +10,7 @@ return [
   'environments' => [
     'local' => [
       'adapter' => 'mysql',
-      'host' => 'netmedica-db',
+      'host' => 'netmedica-backend-db',
       'port' => 3306,
       'username' => $_ENV['DB_USER'],
       'password' => $_ENV['DB_PASSWORD'],
