@@ -1,3 +1,6 @@
+> [!NOTE]
+> This project was created as a technical test on behalf of [NetMedica](https://netmedicaitalia.it).
+
 # NetMedica
 
 <p>
